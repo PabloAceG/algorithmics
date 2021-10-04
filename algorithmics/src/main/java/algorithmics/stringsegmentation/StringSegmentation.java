@@ -7,6 +7,10 @@ public class StringSegmentation {
         String s,
         Set<String> dictionary) {
 
+        if (s == null) {
+            return true;
+        }
+
         for (int i = 1; i < s.length(); i++) {
             String firstWord = s.substring(0, i);
 

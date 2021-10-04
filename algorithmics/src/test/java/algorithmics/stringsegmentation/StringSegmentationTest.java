@@ -20,7 +20,33 @@ import org.junit.jupiter.api.Test;
 */
 public class StringSegmentationTest {
     @Test
-    public void tesCase1() {
+    public void testCase1() {
+        Set<String> dictionary = new HashSet<String>();
+        String s = null;
+
+        dictionary.add("hello");
+        dictionary.add("hell");
+        dictionary.add("on");
+        dictionary.add("now");
+
+        assertTrue(StringSegmentation.canSegmentString(s, dictionary));
+    }
+
+    @Test
+    public void testCase2() {
+        Set<String> dictionary = new HashSet<String>();
+        String s = null;
+
+        dictionary.add("hello");
+        dictionary.add("hell");
+        dictionary.add("on");
+        dictionary.add("now");
+
+        assertTrue(StringSegmentation.canSegmentString(s, dictionary));
+    }
+
+    @Test
+    public void testCase3() {
         Set<String> dictionary = new HashSet<String>();
         String s = "hellonow";
 
@@ -32,9 +58,21 @@ public class StringSegmentationTest {
         assertTrue(StringSegmentation.canSegmentString(s, dictionary));
     }
 
+    @Test
+    public void testCase4() {
+        Set<String> dictionary = new HashSet<String>();
+        String s = "ellonow";
+
+        dictionary.add("hello");
+        dictionary.add("hell");
+        dictionary.add("on");
+        dictionary.add("now");
+
+        assertFalse(StringSegmentation.canSegmentString(s, dictionary));
+    }
 
     @Test
-    public void tesCase2() {
+    public void testCase5() {
         Set<String> dictionary = new HashSet<String>();
         String s = "helloworld";
 
