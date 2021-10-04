@@ -1,6 +1,6 @@
 package algorithmics.reversewordssentence;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import java.util.Arrays;
@@ -28,7 +28,7 @@ public class ReverseWordsTest {
         char[] sentence = ReverseWords.reverseWords(null);
         char[] revSentence = null;
 
-        assertTrue(Arrays.equals(sentence, revSentence));
+        assertArrayEquals(sentence, revSentence);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class ReverseWordsTest {
         char[] sentence = ReverseWords.reverseWords(toCharArray(""));
         char[] revSentence = toCharArray("");
 
-        assertTrue(Arrays.equals(sentence, revSentence));
+        assertArrayEquals(sentence, revSentence);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class ReverseWordsTest {
         char[] sentence = ReverseWords.reverseWords(toCharArray("Hello World"));
         char[] revSentence = toCharArray("World Hello");
 
-        assertTrue(Arrays.equals(sentence, revSentence));
+        assertArrayEquals(sentence, revSentence);
     }
 
     @Test
