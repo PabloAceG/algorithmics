@@ -51,11 +51,7 @@ public class FindLowHigh {
 
         }
 
-        if (high == -1) {
-            return high;
-        }
-
-        if (high < arr.size() && arr.get(high) == key) {
+        if (high >= 0  && arr.get(high) == key) {
             return high;
         }
 
